@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS GAMING | PCs y Consolas</title>
+
+    <!-- Google Fonts: Orbitron & Rajdhani -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+    <div class="top-bar">
+        <div class="top-item"><i class="fa-solid fa-bolt"></i> Envíos a todo el país en 24h</div>
+        <div class="top-item">🔥 Arma tu PC Gamer con 15% OFF usando el código: NEXUS15</div>
+        <div class="top-item"><i class="fa-solid fa-shield-halved"></i> Garantía de 1 año</div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-gamepad"></i>
+                <div class="logo-text">
+                    <h1>NEXUS</h1>
+                    <span>GAMING STORE</span>
+                </div>
+            </div>
+
+            <button id="hamburger" class="hamburger" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul id="menu" class="menu">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#catalogo" class="filter-link" data-filter="todos">Catálogo</a></li>
+                <li><a href="#catalogo" class="filter-link" data-filter="pc">PCs Gamer</a></li>
+                <li><a href="#catalogo" class="filter-link" data-filter="consolas">Consolas</a></li>
+                <li><a href="#catalogo" class="filter-link" data-filter="accesorios">Accesorios</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <button id="modoBtn" class="icon-btn" title="Cambiar modo">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="abrirModal" class="account-btn">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Mi Cuenta</span>
+                </button>
+                <button class="icon-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="subtitle">EL FUTURO DEL GAMING</span>
+                <h2>POTENCIA TU <br><span class="highlight-text">EXPERIENCIA</span></h2>
+                <p>Las mejores computadoras y consolas de última generación. Juega sin límites, juega en NEXUS.</p>
+                <a href="#catalogo" class="hero-button">Ver Equipos <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=800&q=80" alt="Setup Gamer">
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BENEFICIOS ================= -->
+    <section class="benefits">
+        <div class="benefit">
+            <i class="fa-solid fa-microchip"></i>
+            <div><h4>Última Tecnología</h4><p>Procesadores de nueva gen</p></div>
+        </div>
+        <div class="benefit">
+            <i class="fa-solid fa-truck-fast"></i>
+            <div><h4>Envío Express</h4><p>Entrega en 24 horas</p></div>
+        </div>
+        <div class="benefit">
+            <i class="fa-solid fa-credit-card"></i>
+            <div><h4>Pago Seguro</h4><p>Tarjetas y QR</p></div>
+        </div>
+        <div class="benefit">
+            <i class="fa-solid fa-headset"></i>
+            <div><h4>Soporte Técnico</h4><p>Asesoría personalizada</p></div>
+        </div>
+    </section>
+
+    <!-- ================= CATÁLOGO CON FILTROS ================= -->
+    <section class="catalog-section" id="catalogo">
+        <div class="section-header">
+            <h2>ARMÁ TU SETUP</h2>
+            <p>Filtra por categoría y encuentra tu próximo equipo</p>
+        </div>
+
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="pc">PCs Gamer</button>
+            <button class="filter-btn" data-filter="consolas">Consolas</button>
+            <button class="filter-btn" data-filter="accesorios">Accesorios</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- Producto 1 -->
+            <div class="product-card" data-category="pc">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=500&q=80" alt="PC Gamer">
+                    <span class="badge new">Nuevo</span>
+                </div>
+                <div class="product-info">
+                    <h3>Titan RTX 4080</h3>
+                    <p class="product-desc">Intel Core i9, 32GB RAM, SSD 2TB. Potencia bruta.</p>
+                    <div class="timestamp-box">
+                        <i class="fa-solid fa-microchip"></i> RTX 4080 · 240Hz
+                    </div>
+                    <div class="product-bottom">
+                        <span class="price">Bs. 15,500</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card" data-category="consolas">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=500&q=80" alt="PlayStation 5">
+                    <span class="badge hot">Top Ventas</span>
+                </div>
+                <div class="product-info">
+                    <h3>PlayStation 5 Pro</h3>
+                    <p class="product-desc">Edición digital, 1TB SSD, incluye 1 control DualSense.</p>
+                    <div class="timestamp-box">
+                        <i class="fa-brands fa-playstation"></i> 4K 120Hz
+                    </div>
+                    <div class="product-bottom">
+                        <span class="price">Bs. 6,200</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card" data-category="consolas">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d?auto=format&fit=crop&w=500&q=80" alt="Xbox Series X">
+                </div>
+                <div class="product-info">
+                    <h3>Xbox Series X</h3>
+                    <p class="product-desc">La consola más potente de Microsoft. Game Pass incluido.</p>
+                    <div class="timestamp-box">
+                        <i class="fa-brands fa-xbox"></i> 12 Teraflops
+                    </div>
+                    <div class="product-bottom">
+                        <span class="price">Bs. 5,800</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card" data-category="accesorios">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=500&q=80" alt="Teclado Gamer">
+                </div>
+                <div class="product-info">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p class="product-desc">Switches rojos, iluminación personalizable, anti-ghosting.</p>
+                    <div class="timestamp-box">
+                        <i class="fa-solid fa-keyboard"></i> USB-C
+                    </div>
+                    <div class="product-bottom">
+                        <span class="price">Bs. 450</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="product-card" data-category="pc">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?auto=format&fit=crop&w=500&q=80" alt="PC Setup">
+                </div>
+                <div class="product-info">
+                    <h3>Streamer Pro</h3>
+                    <p class="product-desc">Ryzen 7, 16GB RAM, RTX 3060. Ideal para streaming.</p>
+                    <div class="timestamp-box">
+                        <i class="fa-solid fa-microchip"></i> RTX 3060
+                    </div>
+                    <div class="product-bottom">
+                        <span class="price">Bs. 8,900</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REDES Y CONTACTO ================= -->
+    <section class="social-contact">
+        <div class="contact-info">
+            <h2>ÚNETE AL GREMIO</h2>
+            <p>Entérate de nuevos drops y torneos de la comunidad.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="contact-details">
+            <p><i class="fa-solid fa-location-dot"></i> Av. Tecnológica #404, La Paz</p>
+            <p><i class="fa-solid fa-phone"></i> +591 700 99999</p>
+            <p><i class="fa-solid fa-envelope"></i> ventas@nexusgaming.com</p>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-gamepad"></i> NEXUS GAMING
+            </div>
+            <p>&copy; 2025 Nexus Gaming. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL DE REGISTRO CON VALIDACIÓN ================= -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <i class="fa-solid fa-user-astronaut"></i>
+                <h2>Crear Cuenta NEXUS</h2>
+                <p>Accede a ofertas exclusivas y seguimiento de pedidos.</p>
+            </div>
+            <form id="registroForm">
+                <div class="form-group">
+                    <input type="text" id="nombre" placeholder="Nombre (solo letras)">
+                    <span class="error-msg" id="error-nombre">Solo letras.</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="apellido" placeholder="Apellido (solo letras)">
+                    <span class="error-msg" id="error-apellido">Solo letras.</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="ci" placeholder="CI (solo números)" maxlength="10">
+                    <span class="error-msg" id="error-ci">Solo números, 5-10 dígitos.</span>
+                </div>
+                <div class="form-group">
+                    <select id="ciudad">
+                        <option value="">Seleccione Ciudad</option>
+                        <option>La Paz</option>
+                        <option>Cochabamba</option>
+                        <option>Santa Cruz</option>
+                        <option>Oruro</option>
+                        <option>Potosí</option>
+                        <option>Tarija</option>
+                        <option>Chuquisaca</option>
+                        <option>Beni</option>
+                        <option>Pando</option>
+                    </select>
+                    <span class="error-msg" id="error-ciudad">Seleccione ciudad.</span>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="telefono" placeholder="Teléfono (8 dígitos, empieza con 6 o 7)" maxlength="8">
+                    <span class="error-msg" id="error-telefono">8 dígitos, inicia con 6 o 7.</span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="correo" placeholder="Correo electrónico">
+                    <span class="error-msg" id="error-correo">Correo inválido.</span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Contraseña (mín. 8, 1 mayúscula, 1 número)">
+                    <span class="error-msg" id="error-password">Mín. 8 caract, 1 mayúscula, 1 número.</span>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="confirmar" placeholder="Confirmar contraseña">
+                    <span class="error-msg" id="error-confirmar">Las contraseñas no coinciden.</span>
+                </div>
+                <label class="terms">
+                    <input type="checkbox" id="terminos">
+                    Acepto los términos y condiciones
+                </label>
+                <span class="error-msg" id="error-terminos" style="margin-bottom: 10px;">Debe aceptar los términos.</span>
+                
+                <button type="submit" class="register-btn">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
